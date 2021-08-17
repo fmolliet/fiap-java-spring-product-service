@@ -1,0 +1,42 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+info:
+  app:
+    description: '@project.description@'
+    encoding: '@project.build.sourceEncoding@'
+    java:
+      version: '@java.version@'
+    name: '@project.name@'
+    version: '@project.version@'
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+product:
+  jwt:
+    expiration: 86400000
+    secret: rm'!@N=Ke!~p8VTA2ZRK~nMDQX5Uvm!m'D&]{@Vr?G;2?XhbC:Qa#9#eMLN}x3?JR3.2zr~v)gYF^8:8>:XfB:Ww75N/emt9Yj[bQMNCWwWJ?N,nvH.<2.r~w]*e~vgak)X"v8H`MH/7"2E`,^k@n<vE-wD3g9JWPy;CrY*.Kd2_D])=><D?YhBaSua5hW%{2]_FVXzb9`8FH^b[X3jzVER&:jw2<=c38=>L/zBq`}C6tT*cCSVC^c]-L}&/
+spring:
+  application:
+    name: product
+  boot:
+    admin:
+      client:
+        instance:
+          management-base-url: http://localhost:8080/
+        url: http://localhost:8081
+  data:
+    mongodb:
+      database: products
+      uri: ${MONGO_URI:mongodb://localhost:27017/products}
+
+server:
+  port: ${PORT:8082}
