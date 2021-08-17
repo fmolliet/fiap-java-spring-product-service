@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.4.9-SNAPSHOT</version>
-		<relativePath/>
+		<relativePath/><!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.tomatch</groupId>
 	<artifactId>products</artifactId>
@@ -59,12 +59,6 @@
 		    <groupId>io.springfox</groupId>
 		    <artifactId>springfox-swagger2</artifactId>
 		    <version>2.9.2</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.9.2</version>
 		</dependency>
 		
 		<!-- JWT -->
